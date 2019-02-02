@@ -1,11 +1,16 @@
 $primary-color: grey;
-$secondary-color: orange;
+$secondary-color: lightblue;
+$accent-color: orange;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $background-opacity: 0.6;
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
+}
+
+@mixin easeOutSlow {
+    transition: all 1.5s ease-out;
 }
 
 @mixin background {
@@ -24,6 +29,27 @@ $background-opacity: 0.6;
               z-index: -1;
               background: rgba($primary-color, $background-opacity)
           }
+        //   .circle {
+        //     position: absolute;
+        //     width: 50vmin;
+        //     height: 50vmin;
+        //     margin-left: calc(50vw - 25vmin);
+        //     margin-top: calc(50vh - 25vmin);
+        //     z-index: 4;
+        //     background: $secondary-color;
+        //     border-radius: 50%;
+        //     border: solid black 10px;
+        //     &:hover {
+        //         margin-left: 0;
+        //         margin-top: 0;
+        //         width: 100vw;
+        //         height: 100vh;
+        //         background: rgba($primary-color, 0);
+        //         border-radius: 0;
+        //         @include easeOutSlow();
+        //     }
+        // }
+
         }
     }
 }
