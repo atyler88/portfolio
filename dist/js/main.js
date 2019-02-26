@@ -4,6 +4,8 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const circle = document.querySelector(".circle");
+const circleOverlay = document.querySelector(".circle-overlay");
 
 //Set Initial State of Menu
  let showMenu = false;
@@ -30,4 +32,10 @@ const navItems = document.querySelectorAll('.nav-item');
         //Reset Menu State
         showMenu = false;
      }
+ }
+
+circle.addEventListener('click', closeLanding);
+ function closeLanding() {
+      circle.classList.add('closeLanding');
+      circleOverlay.classList.add('closeLanding');
  }
