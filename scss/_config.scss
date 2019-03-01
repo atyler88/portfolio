@@ -1,13 +1,14 @@
-$primary-color: #444;
+$primary-color: #fff;
 $secondary-color: #f7484e;
-$accent-color: #00bfff;
+$accent-color: lightgray;
 $show-home-image: true;
 $home-image: url('../img/background-bw.jpg');
 $logo-image: url('../img/logo-white.png');
 $background-opacity: 0.6;
 $portrait: url('../img/portrait.jpg');
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-$heading-font-size: calc(3 * (14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))));
+$heading-font-size: calc(4 * (14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))));
+$small-font-size: calc(.5 * (14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))));
 $line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 
 @mixin easeOut {
@@ -65,32 +66,34 @@ $line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
     }
 }
 
-@mixin background {
-    @if $show-home-image {
-        &#bg-img {
-          background: $home-image; 
-          background-attachment: fixed;
-          background-size: cover;
-          
+// @mixin background {
+//     // @if $show-home-image {
+//     //     &#bg-img {
+//     //       background: $home-image; 
+//     //       background-size: cover;
+//     //     //   background-attachment: fixed;
 
-          .overlay {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 100%;
-              height: 100%;
-              clip-path: polygon(
-                0 0, /* left top */
-                100% 0, /* right top */ 
-                100% 100%, /* right bottom */
-                0 85% /* left bottom */
-              );
-              z-index: -1;
-              background:  linear-gradient(rgba($primary-color, $background-opacity), 65%, rgba($secondary-color, $background-opacity));
-          }
 
-        }
-    }
+
+//     //     }
+//     // }
+// }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      0 0, /* left top */
+      100% 0, /* right top */ 
+      100% 100%, /* right bottom */
+      0 85% /* left bottom */
+    );
+    z-index: -1;
+    background:  linear-gradient(rgba($accent-color, $background-opacity), 65%, rgba($secondary-color, $background-opacity));
 }
 
 @function set-text-color($color) {
