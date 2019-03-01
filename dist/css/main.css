@@ -379,13 +379,15 @@ main {
 
 .background {
   position: absolute;
+  background: url("../img/background-bw.jpg");
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-  z-index: -2;
-  background: url("../img/background-bw.jpg"); }
+  z-index: -2; }
 
 @media screen and (max-width: 768px) {
   main {
